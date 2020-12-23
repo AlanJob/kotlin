@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         //Lección 2
         //tiposDeDatos()
         //Lección 3
-        sentenciaIf()
+        //sentenciaIf()
+        //Lección 4
+        sentenciaWhen()
     }
     private fun variablesYConstantes(){
         // Variables
@@ -74,9 +76,46 @@ class MainActivity : AppCompatActivity() {
         }else {
             println("$myNumber otra opcion")
         }
+    }
 
+    /*Aquí vamos a hablar de la sentencia When */
+    private fun sentenciaWhen(){
+        val country = "México"
+        when(country){
+            "México", "Perú", "Colombia", "Argentina" -> {
+                println("El idioma es Español")
+            }
+            "EEUU" -> {
+                println("El idioma es Inglés")
+            }
+            "Francia" -> {
+                println("El idioma es Francés")
+            } else -> {
+                println("No conocemos el idioma")
+            }
+        }
 
+        //When con int
+        val age = 10
+        when(age){
+            0, 1, 2 -> {
+                println("Eres un bebé")
+            }
+            in 3..10 -> {
+                println("Eres un niño")
+            }
+            in 11..17 ->{
+                println("Eres un adolescente")
+            }
+            in 18..69 ->{
+                println("Eres un adulto")
+            }
+            in 70..99 -> {
+                println("Eres anciano")
+            }else -> {
+                println("Sorprendente")
+            }
 
-
+        }
     }
 }
