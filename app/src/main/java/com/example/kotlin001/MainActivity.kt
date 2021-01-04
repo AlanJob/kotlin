@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         //Lección 3
         //sentenciaIf()
         //Lección 4
-        sentenciaWhen()
+        //sentenciaWhen()
+        //Lección 5
+        arrays()
     }
     private fun variablesYConstantes(){
         // Variables
@@ -117,5 +119,59 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    //Aqui vamos a tratar los arreglos que es un conjunto de datos del mismo tipo
+    //ordenados pues el primer elemento toma la posición 0, el segundo la posición 1 y asi sucesivamente
+    //Se pueden añadir repetidos
+
+    private fun arrays(){
+        val name = "Alan"
+        val surname = "Job"
+        val company = "Jilay"
+        val age = "29"
+
+        //Creacion de array
+        val myArray = arrayListOf<String>()
+        //Añadir datos
+        myArray.add(name)
+        myArray.add(surname)
+        myArray.add(company)
+        myArray.add(age)
+
+        //Agregar mas de un elemento a la vez
+        myArray.addAll(listOf("Ejemplo001", "Ejemplo002"))
+
+        //Modificar los elementos ya ingresados
+        myArray[4] = "rewrite"
+
+        //Acceso a datos
+        val myCompany:String = myArray[2]
+        println(myCompany)
+
+        //Borramos elementos
+        myArray.removeAt(5)
+
+        //Imprimimos todo
+        println(myArray)
+
+        //Recorremos el array
+        myArray.forEach {
+        println(it)}
+
+        //Contar
+        println(myArray.count())
+
+        //Imprimir el primero
+        println(myArray.first())
+
+        //Imprimir el último
+        println(myArray.last())
+
+        //Vaciamos el array
+        myArray.clear()
+        println(myArray.count())
+
+
     }
 }
