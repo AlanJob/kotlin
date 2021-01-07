@@ -16,7 +16,9 @@ class MainActivity : AppCompatActivity() {
         //Lección 4
         //sentenciaWhen()
         //Lección 5
-        arrays()
+        //arrays()
+        //Lección 6
+        maps()
     }
     private fun variablesYConstantes(){
         // Variables
@@ -172,6 +174,35 @@ class MainActivity : AppCompatActivity() {
         myArray.clear()
         println(myArray.count())
 
+
+    }
+
+    private fun maps(){
+        //Aqui hablaremos de los diccionarios o mapas
+        var myMap: Map<String, Int> = mapOf()
+        println(myMap)
+
+        //Añadir elementos
+        myMap = mutableMapOf("Jilay" to 1, "Fix" to 2, "Soft" to 3)
+        println(myMap)
+
+        //Añadir un solo valor
+        myMap["Ana"] = 7
+        myMap.put("Maria",3)
+        println(myMap)
+
+        myMap.put("Marcos", 3)
+        //Actualización de datos
+        myMap.put("Jilay", 3)
+        myMap["Jilay"] = 7
+        println(myMap)
+
+        //Accedemos a los datos
+        println(myMap["Jilay"])
+
+        //Eliminación de datos
+        myMap.remove("Marcos")
+        println(myMap)
 
     }
 }
