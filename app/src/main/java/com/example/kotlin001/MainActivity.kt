@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
         //Lección 5
         //arrays()
         //Lección 6
-        maps()
+        //maps()
+        //Lección 7
+        loops()
     }
     private fun variablesYConstantes(){
         // Variables
@@ -204,5 +206,55 @@ class MainActivity : AppCompatActivity() {
         myMap.remove("Marcos")
         println(myMap)
 
+    }
+
+    private fun loops(){
+        /*Bucles nos sirven para almacenar datos*/
+        val myArray: List<String> = listOf("Hola", "Bienvenidos a Jilay", "Fix")
+        val myMap: MutableMap<String, Int> = mutableMapOf("Uno" to 1, "Dos" to 2, "Cinco" to 5)
+
+        //For
+
+        for(myString in myArray){
+            println(myString)
+        }
+
+        //Lo que sigue significa que vamos a utilizar interpolación de cadenas
+        //con el uso de simbolo $ seguido de la variable o constante
+        for(myElement in myMap){
+            println("${myElement.key}-${myElement.value}")
+        }
+
+        //Veamos más utilidades del for
+
+        for(x in 0..10){
+            println(x)
+        }
+
+        for(x in 0 until 10){
+            println(x)
+        }
+
+        for(x in 0..10 step 2){
+            println(x)
+        }
+
+        for(x in 10 downTo 0 step 2){
+            println(x)
+        }
+
+        //Atajo para llenar un Array
+
+        val myNumArray = (0..10)
+        for(myNum in myNumArray){
+            println(myNum)
+        }
+
+        //While
+        var x = 0
+        while (x < 10){
+            println(x)
+            x++
+        }
     }
 }
