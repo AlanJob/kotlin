@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         //Lección 6
         //maps()
         //Lección 7
-        loops()
+        //loops()
+        //Lección 8
+        nullSafety()
     }
     private fun variablesYConstantes(){
         // Variables
@@ -242,6 +244,11 @@ class MainActivity : AppCompatActivity() {
         for(x in 10 downTo 0 step 2){
             println(x)
         }
+        //For para números pares
+        for(contador in 1..100){
+            if(contador%2 == 0)
+                println(contador)
+        }
 
         //Atajo para llenar un Array
 
@@ -255,6 +262,36 @@ class MainActivity : AppCompatActivity() {
         while (x < 10){
             println(x)
             x++
+        }
+    }
+
+    private fun nullSafety(){
+        //Aquí vamos a platicar de seguridad contra nulos
+        var myString = "Jilay"
+        println(myString)
+
+        //Variable null safety
+        var mySafetyString: String? = "Jilay Null Safety"
+        mySafetyString = null
+        println(mySafetyString)
+
+        mySafetyString = "Fix"
+        println(mySafetyString)
+        /*
+        //Comprobamos que no sea null
+        if (mySafetyString != null){
+            //Con doble signo de admiración lo volvemos a comprobar
+            println(mySafetyString!!)
+        }
+        */
+        //Safe call, la mejor forma
+        println(mySafetyString?.length)
+
+        //Otro modo correcto en kotlin
+        mySafetyString?.let {
+            println(it)
+        }?: kotlin.run {
+            println(mySafetyString)
         }
     }
 }
